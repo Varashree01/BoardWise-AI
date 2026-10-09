@@ -1,0 +1,93 @@
+{
+  "dataset_info": {
+    "name": "Bengaluru Metropolitan Sample Transit Network",
+    "version": "1.0-demo",
+    "is_demo_data": true,
+    "disclaimer": "Demonstration transit network for hackathon simulation. Not live BMTC or BMRCL real-time feed."
+  },
+  "stops": [
+    { "id": "majestic", "name": "Majestic (KBS)", "type": "interchange", "lat": 12.9767, "lon": 77.5713 },
+    { "id": "mg_road", "name": "MG Road", "type": "metro_bus", "lat": 12.9756, "lon": 77.6066 },
+    { "id": "indiranagar", "name": "Indiranagar", "type": "metro_bus", "lat": 12.9784, "lon": 77.6408 },
+    { "id": "koramangala", "name": "Koramangala", "type": "bus_hub", "lat": 12.9352, "lon": 77.6245 },
+    { "id": "silk_board", "name": "Silk Board Junction", "type": "major_interchange", "lat": 12.9176, "lon": 77.6238 },
+    { "id": "electronic_city", "name": "Electronic City Toll", "type": "bus_terminal", "lat": 12.8399, "lon": 77.6770 },
+    { "id": "marathahalli", "name": "Marathahalli Bridge", "type": "interchange", "lat": 12.9591, "lon": 77.6974 },
+    { "id": "whitefield", "name": "Whitefield (ITPL)", "type": "metro_bus", "lat": 12.9855, "lon": 77.7314 },
+    { "id": "hebbal", "name": "Hebbal Flyover", "type": "bus_hub", "lat": 13.0358, "lon": 77.5970 },
+    { "id": "yeshwantpur", "name": "Yeshwantpur TTMC", "type": "interchange", "lat": 13.0223, "lon": 77.5503 },
+    { "id": "banashankari", "name": "Banashankari TTMC", "type": "interchange", "lat": 12.9156, "lon": 77.5736 }
+  ],
+  "routes": [
+    {
+      "id": "335E",
+      "name": "Route 335-E (Volvo AC)",
+      "mode": "bus",
+      "operator": "BMTC Demo",
+      "headway_mins": 12,
+      "stops": ["majestic", "mg_road", "indiranagar", "marathahalli", "whitefield"],
+      "durations_between_stops_mins": [15, 12, 22, 20]
+    },
+    {
+      "id": "METRO_PURPLE",
+      "name": "Purple Line Metro",
+      "mode": "metro",
+      "operator": "BMRCL Demo",
+      "headway_mins": 6,
+      "stops": ["majestic", "mg_road", "indiranagar", "whitefield"],
+      "durations_between_stops_mins": [8, 10, 24]
+    },
+    {
+      "id": "356C",
+      "name": "Route 356-C",
+      "mode": "bus",
+      "operator": "BMTC Demo",
+      "headway_mins": 10,
+      "stops": ["majestic", "koramangala", "silk_board", "electronic_city"],
+      "durations_between_stops_mins": [22, 14, 25]
+    },
+    {
+      "id": "500D",
+      "name": "Route 500-D (Ring Road Express)",
+      "mode": "bus",
+      "operator": "BMTC Demo",
+      "headway_mins": 8,
+      "stops": ["hebbal", "marathahalli", "silk_board", "banashankari"],
+      "durations_between_stops_mins": [28, 22, 18]
+    },
+    {
+      "id": "G2",
+      "name": "Route G-2 (Big10 Radial)",
+      "mode": "bus",
+      "operator": "BMTC Demo",
+      "headway_mins": 15,
+      "stops": ["indiranagar", "koramangala", "silk_board"],
+      "durations_between_stops_mins": [18, 12]
+    },
+    {
+      "id": "252",
+      "name": "Route 252",
+      "mode": "bus",
+      "operator": "BMTC Demo",
+      "headway_mins": 15,
+      "stops": ["majestic", "yeshwantpur", "hebbal"],
+      "durations_between_stops_mins": [16, 18]
+    },
+    {
+      "id": "MF1",
+      "name": "Metro Feeder MF-1",
+      "mode": "feeder",
+      "operator": "BMTC Demo",
+      "headway_mins": 12,
+      "stops": ["banashankari", "silk_board", "electronic_city"],
+      "durations_between_stops_mins": [16, 22]
+    }
+  ],
+  "transfer_points": {
+    "silk_board": { "min_transfer_buffer_mins": 6, "walk_distance_meters": 180, "avg_wait_mins": 7 },
+    "majestic": { "min_transfer_buffer_mins": 8, "walk_distance_meters": 350, "avg_wait_mins": 6 },
+    "indiranagar": { "min_transfer_buffer_mins": 5, "walk_distance_meters": 120, "avg_wait_mins": 5 },
+    "marathahalli": { "min_transfer_buffer_mins": 6, "walk_distance_meters": 200, "avg_wait_mins": 8 },
+    "koramangala": { "min_transfer_buffer_mins": 5, "walk_distance_meters": 150, "avg_wait_mins": 7 }
+  }
+}
