@@ -202,8 +202,9 @@ cd frontend && npm run build
 
 ## 🌐 Live Deployment
 
+- **Production Web Application (Vercel):** [https://frontend-sepia-two-ewb8s2cr8k.vercel.app](https://frontend-sepia-two-ewb8s2cr8k.vercel.app)
 - **GitHub Repository:** [https://github.com/Varashree01/BoardWise-AI](https://github.com/Varashree01/BoardWise-AI)
-- **Vercel Web App:** Integrated via Vercel CLI for automated client continuous deployment.
+- **Vercel Team Dashboard:** [https://vercel.com/flamex-01](https://vercel.com/flamex-01)
 
 ---
 
